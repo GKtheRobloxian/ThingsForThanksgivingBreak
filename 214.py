@@ -3,6 +3,8 @@ import multifactorgui
 
 def TestMyButton():
     frameAuth.tkraise()
+    passwordGet = ent_password.get()
+    authLabel.config(text = passwordGet)
 
 # main window
 root = tk.Tk()
@@ -12,6 +14,8 @@ frameLogin = tk.Frame(root)
 frameLogin.grid(row = 0, column = 0, sticky = "news")
 frameAuth = tk.Frame(root)
 frameAuth.grid(row = 0, column = 0, sticky = "news")
+authLabel = tk.Label(frameAuth, text = "lol")
+authLabel.pack()
 lblUsername = tk.Label(frameLogin, text="Username:")
 lblUsername.pack()
 ent_username = tk.Entry(frameLogin, bd=3)
