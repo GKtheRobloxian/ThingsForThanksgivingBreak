@@ -1,4 +1,5 @@
 import tkinter as tk
+import tkinter.scrolledtext as tksc
 import multifactorgui
 
 def TestMyButton():
@@ -24,7 +25,10 @@ labeel = tk.Label(frameLogin, text = "Password:", font = "Courier")
 labeel.pack()
 ent_password = tk.Entry(frameLogin, bd=3, show = "*")
 ent_password.pack(pady=5)
-loginButton = tk.Button(frameLogin, text = "Login", command = TestMyButton)
+bt_image = tk.PhotoImage(file="button.gif")
+bt_image = bt_image.subsample(10,10)
+loginButton = tk.Button(frameLogin, text = "Login", command = TestMyButton, image = bt_image)
 loginButton.pack()
 frameLogin.tkraise()
+test_textbox = tksc.ScrolledText(frameAuth)
 root.mainloop()
